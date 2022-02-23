@@ -8,4 +8,5 @@ Note that current version of Mysqlconnector will fail on Python 2.7 due to the h
 I developed this on my free time, but feel free to make improvement suggestion, report bugs, and any thoughts on it.
 
 Regards to all
+
 Andre
