@@ -1,4 +1,3 @@
-
 #V 0.1.0
 #By Andre Metelo (metelo@gmail.com)
 # Initial release date:	2022/02/23
@@ -21,13 +20,11 @@ Some todos:
 
 #Class to manage MYSQL connections within RobotFramework.
 
-#import re
 import unidecode
 import mysql.connector
-#import date
 import uuid
 
-#Should I write an ASCII version of the execute/executemany/fetch methods?
+#Should I write an ASCII version of the execute/executemany/fetch methods? or simply drop UTF to ASCII encode completely?
 class mysqlwrapper(object):
 
 	#initiate internal Dicts with current active connections and cursors
