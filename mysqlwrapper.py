@@ -47,12 +47,12 @@ class mysqlwrapper(object):
 
 	#This will create a cocnnection and cursor for the DB. It
 	#It returns a UUID if all works, and -1 in case of connection error
-	def connect_to_db(self, host, user, password, database):
+	def connect_to_db(self, dbhost, dbuser, dbpassword, dbdatabase):
 		mydb = mysql.connector.connect(
-			host=dbserver,
+			host=dbhost,
 			user=dbuser,
 			password=dbpwd,
-			database=MEIdatabase)
+			database=dbdatabase)
 		mycursor = mydb.cursor()
 		if mydb.is_connected():
 			myuuid = self.create_uuid()
