@@ -68,11 +68,11 @@ class mysqlwrapper(object):
 		mydb = self.connections_internal['myuuid']
 		mycursor.close()
 		mydb.close()
-		del self.cursors_internal['myuuid']
-		del self.connections_internal['myuuid']
 		if mydb.is_connected():
-			return -1
+			return -1 #DB Connection did not close
 		else:
+			del self.cursors_internal['myuuid']
+			del self.connections_internal['myuuid']
 			return True
 
 	#This will close all connections and cursor and remove them from the active list
@@ -82,7 +82,7 @@ class mysqlwrapper(object):
 		for mydb in self.connections_internal:
 			mydb.close()
 		self.cursors_internal.clear()
-		self.connections_internal.clear
+		self.connections_internal.clear()
 
 	def list_open_connections(self):
 		return self.connections_internal['myuuid']
