@@ -6,7 +6,7 @@ ${DBhost} 	XXXXX.XXX.XXX
 ${user}	    user
 ${pwd}      password
 ${database} DBname
-${sql}      sql = "INSERT INTO clients (name, email, cel) VALUES (%s, %s, %s)
+${sql}      INSERT INTO clients (name, email, cel) VALUES (%s, %s, %s);
 ${data}     ['name', 'email', 'cel']
 
 *** Comment ***
